@@ -1,0 +1,60 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+#Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pac-man-emulator-uwp", "emulator.uwp\pac-man-emulator-uwp.csproj", "{CE79EB43-B780-89AD-9FE6-F98FA06A63B0}"
+#EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z80", "z80\z80.csproj", "{FBDD3BA1-4637-032C-FF95-EBD79CA099BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "emulator.cli", "emulator.cli\emulator.cli.csproj", "{A733DC99-9A5C-193D-5916-B44C1F74C88C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "disassembler", "disassembler\disassembler.csproj", "{F6C683E0-FA2A-B2D6-E92E-2459C032E917}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z80.tests", "z80.tests\z80.tests.csproj", "{3DA0ADC0-B96F-CF02-1EC9-77990DC28932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "emulator.tests", "emulator.tests\emulator.tests.csproj", "{C0D76460-7195-86D3-B2AF-80A8EB619317}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "emulator", "emulator\emulator.csproj", "{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE79EB43-B780-89AD-9FE6-F98FA06A63B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE79EB43-B780-89AD-9FE6-F98FA06A63B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE79EB43-B780-89AD-9FE6-F98FA06A63B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE79EB43-B780-89AD-9FE6-F98FA06A63B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBDD3BA1-4637-032C-FF95-EBD79CA099BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDD3BA1-4637-032C-FF95-EBD79CA099BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDD3BA1-4637-032C-FF95-EBD79CA099BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDD3BA1-4637-032C-FF95-EBD79CA099BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A733DC99-9A5C-193D-5916-B44C1F74C88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A733DC99-9A5C-193D-5916-B44C1F74C88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A733DC99-9A5C-193D-5916-B44C1F74C88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A733DC99-9A5C-193D-5916-B44C1F74C88C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C683E0-FA2A-B2D6-E92E-2459C032E917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C683E0-FA2A-B2D6-E92E-2459C032E917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C683E0-FA2A-B2D6-E92E-2459C032E917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C683E0-FA2A-B2D6-E92E-2459C032E917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DA0ADC0-B96F-CF02-1EC9-77990DC28932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA0ADC0-B96F-CF02-1EC9-77990DC28932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA0ADC0-B96F-CF02-1EC9-77990DC28932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA0ADC0-B96F-CF02-1EC9-77990DC28932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D76460-7195-86D3-B2AF-80A8EB619317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D76460-7195-86D3-B2AF-80A8EB619317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D76460-7195-86D3-B2AF-80A8EB619317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D76460-7195-86D3-B2AF-80A8EB619317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0140CEF-D3CF-4810-9283-F7AB71A3D244}
+	EndGlobalSection
+EndGlobal
