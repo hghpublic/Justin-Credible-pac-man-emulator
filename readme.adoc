@@ -1,0 +1,143 @@
+= Pac-Man Emulator
+:toc:
+:sectnums: 
+ifndef::env-github[:icons: font]
+:note-caption: :paperclip:
+:important-caption: :exclamation:
+:warning-caption: :warning:
+
+[IMPORTANT]
+====
+The commits in this branch are highly unstable. I rebase and force push at will.
+
+The commit history may be rewritten without notice.
+====
+
+== Pac-Man Emulator
+
+=== GitHub
+
+Source::
+
+https://github.com/Justin-Credible/pac-man-emulator
+
+Fork::
+
+https://github.com/hghpublic/Justin-Credible-pac-man-emulator
+
+=== Screenshot
+
+TBD
+
+=== Build & Run
+
+[source, bash]
+----
+./build.sh
+./run.sh
+----
+
+== dotnet
+
+=== SixLabors.ImageSharp
+
+https://github.com/SixLabors/ImageSharp
+
+
+== SDL2-CS
+
+https://www.nuget.org/packages/SDL2-CS
+
+----
+dotnet add package SDL2-CS --version 2.0.0
+----
+
+https://github.com/flibitijibibo/SDL2-CS
+
+https://jsayers.dev/c-sharp-sdl-tutorial-part-1-setup/
+
+----
+$ dpkg -L libsdl2-ttf-2.0-0:arm64 
+
+...
+
+/usr/lib/aarch64-linux-gnu/libSDL2_ttf-2.0.so.0.2000.1
+
+...
+
+/usr/lib/aarch64-linux-gnu/libSDL2_ttf-2.0.so.0
+
+
+cd emulator.cli
+$ cp /usr/lib/aarch64-linux-gnu/libSDL2-2.0.so libSDL2.so
+----
+
+=== Dependencies
+
+----
+$ sudo apt install libsdl2-2.0-0 libsdl2-gfx-1.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-ttf-2.0-0
+$ sudo apt install libsdl2-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+----
+
+=== Stash
+
+==== SDL2-CS-Tutorial
+
+https://github.com/JeremySayers/SDL2-CS-Tutorial
+
+
+
+
+== Download file from GitHub
+
+https://stackoverflow.com/questions/18126559/how-can-i-download-a-single-raw-file-from-a-private-github-repo-using-the-comman
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+
+----
+
+# Source - https://stackoverflow.com/a
+# Posted by thomasfuchs, modified by community. See post 'Timeline' for change history
+# Retrieved 2025-11-10, License - CC BY-SA 4.0
+
+curl -H 'Authorization: token INSERTACCESSTOKENHERE' \
+  -H 'Accept: application/vnd.github.v3.raw' \
+  -O \
+  -L https://api.github.com/repos/owner/repo/contents/path
+
+
+https://raw.githubusercontent.com/user/repository/branch/filename
+
+https://github.com/downloads/user/repository/filename
+----
+
+== Issues
+
+C# Dev Kit only supports SDK-style projects. Upgrade your project to an SDK-style project. Alternatively, you can set your workspace to use the C# extension, but some C# Dev Kit features will be unavailable. Learn more.
+
+C# Dev Kit FAQ
+
+https://code.visualstudio.com/docs/csharp/cs-dev-kit-faq#_what-project-types-are-currently-supported
+
+----
+2025-11-09 08:21:27.676 [warning] The project file '/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator.uwp/pac-man-emulator-uwp.csproj' is in unsupported format (for example, a traditional .NET Framework project). It need be converted to new SDK style to work in C# Dev Kit.
+2025-11-09 08:21:27.709 [error] Failed to load project '/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator.uwp/pac-man-emulator-uwp.csproj'. One or more errors occurred. (This project is not supported in C# Dev Kit.)
+2025-11-09 08:21:27.891 [warning] (/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator/emulator.csproj): Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr
+2025-11-09 08:21:27.892 [warning] (/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator/emulator.csproj): Package 'SixLabors.ImageSharp' 1.0.0-rc0003 has a known high severity vulnerability, https://github.com/advisories/GHSA-2cmq-823j-5qj8
+2025-11-09 08:21:27.892 [warning] (/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator/emulator.csproj): Package 'SixLabors.ImageSharp' 1.0.0-rc0003 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-5x7m-6737-26cr
+2025-11-09 08:21:27.892 [warning] (/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator/emulator.csproj): Package 'SixLabors.ImageSharp' 1.0.0-rc0003 has a known high severity vulnerability, https://github.com/advisories/GHSA-63p8-c4ww-9cg7
+2025-11-09 08:21:27.892 [warning] (/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator/emulator.csproj): Package 'SixLabors.ImageSharp' 1.0.0-rc0003 has a known high severity vulnerability, https://github.com/advisories/GHSA-65x7-c272-7g7r
+2025-11-09 08:21:27.893 [warning] (/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator/emulator.csproj): Package 'SixLabors.ImageSharp' 1.0.0-rc0003 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-g85r-6x2q-45w7
+2025-11-09 08:21:27.893 [warning] (/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator/emulator.csproj): Package 'SixLabors.ImageSharp' 1.0.0-rc0003 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-qxrv-gp6x-rc23
+2025-11-09 08:21:27.894 [warning] (/Users/hgh/hgh/dev/github/hghpublic/Justin-Credible-pac-man-emulator/emulator/emulator.csproj): Package 'SixLabors.ImageSharp' 1.0.0-rc0003 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-rxmq-m78w-7wmc
+2025-11-09 08:21:28.099 [info] Project system initialization finished. 6 project(s) are loaded, and 1 failed to load.
+
+----
+
+=== vscode
+
+`settings.json`::
+----
+    "dotnet.codeLens.enableReferencesCodeLens": false,
+    "dotnet.preferCSharpExtension": true
+----
