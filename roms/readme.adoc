@@ -1,0 +1,102 @@
+= Roms
+:toc:
+:sectnums:
+
+== ROM sets
+
+[cols="~,~,~", options="header"]
+|===
+| | PAC_MAN | MS_PAC_MAN
+
+| 1 | `PAC_MAN_CODE_1` | `PAC_MAN_CODE_1`
+| 2 | `PAC_MAN_CODE_2` | `PAC_MAN_CODE_2`
+| 3 | `PAC_MAN_CODE_3` | `PAC_MAN_CODE_3`
+| 4 | `PAC_MAN_CODE_4` | `PAC_MAN_CODE_4`
+| 5 | `PAC_MAN_COLOR` | `PAC_MAN_COLOR`
+| 6 | `PAC_MAN_PALETTE` | `PAC_MAN_PALETTE`
+| 7 | `PAC_MAN_TILE` | `MS_PAC_MAN_TILE`
+| 8 | `PAC_MAN_SPRITE` | `MS_PAC_MAN_SPRITE`
+| 9 | `PAC_MAN_SOUND_1` | `PAC_MAN_SOUND_1`
+| 10 | `PAC_MAN_SOUND_2` | `PAC_MAN_SOUND_2`
+| 11 | | `MS_PAC_MAN_AUX_U5`
+| 12 | | `MS_PAC_MAN_AUX_U6`
+| 13 | | `MS_PAC_MAN_AUX_U7`
+|===
+
+[cols="~,~,~,~,~", options="header"]
+|===
+| ROMFile | FileName | Size | CRC32 | Description
+
+| `PAC_MAN_CODE_1` | `pacman.6e` | 4096 | `C1E6AB10` | Code 1 (4KB)
+| `PAC_MAN_CODE_2` | `pacman.6f` | 4096 | `1A6FB2D4` | Code 2 (4KB)
+| `PAC_MAN_CODE_3` | `pacman.6h` | 4096 | `BCDD1BEB` | Code 3 (4KB)
+| `PAC_MAN_CODE_4` | `pacman.6j` | 4096 | `817D94E3` | Code 4 (4KB)
+| `PAC_MAN_COLOR` | `82s123.7f` | 32 | `2FC650BD` | Color (32B) (32 one-byte colors)
+| `PAC_MAN_PALETTE` | `82s126.4a` | 256 | `3EB3A8E4` | Palette (256B) (64 four-byte pallets)
+| `PAC_MAN_TILE` | `pacman.5e` | 4096 | `0C944964` | Tile (4KB) (256 8x8 pixel tile images)
+| `PAC_MAN_SPRITE` | `pacman.5f` | 4096 | `958FEDF9` | Sprite (4KB) (64 16x16 sprite images)
+| `PAC_MAN_SOUND_1` | `82s126.1m` | 256 | `A9CC86BF` | Sound 1 (256B) (8 waveforms)
+| `PAC_MAN_SOUND_2` | `82s126.3m` | 256 | `77245B66` | Sound 2 (256B) (8 waveforms)
+| `MS_PAC_MAN_TILE` | `5e` | 4096 | `5C281D01` | Tile (4KB) (256 8x8 pixel tile images)
+| `MS_PAC_MAN_SPRITE` | `5f` | 4096 | `615AF909` | Sprite (4KB) (64 16x16 sprite images)
+| `MS_PAC_MAN_AUX_U5` | `u5` | 2048 | `F45FBBCD` | Aux Board ROM (2KB)
+| `MS_PAC_MAN_AUX_U6` | `u6` | 4096 | `A90E7000` | Aux Board ROM (4KB)
+| `MS_PAC_MAN_AUX_U7` | `u7` | 4096 | `C82CD714` | Aux Board ROM (4KB)
+|===
+
+
+=== crc32
+
+----
+$ sudo apt install libarchive-zip-perl
+---- 
+
+==== pacman
+
+---- 
+# pacman.zip
+# MAME ROM Set: pacman
+$ for f in pacman.*; do echo "$f\t $(crc32 $f)"; done 
+pacman.5e        0c944964
+pacman.5f        958fedf9
+pacman.6e        c1e6ab10
+pacman.6f        1a6fb2d4
+pacman.6h        bcdd1beb
+pacman.6j        817d94e3
+ 
+# copied from mspacman.zip
+$ for f in 82s*.*; do echo "$f\t $(crc32 $f)"; done
+82s123.7f        2fc650bd
+82s126.1m        a9cc86bf
+82s126.3m        77245b66
+82s126.4a        3eb3a8e4
+
+---- 
+
+
+==== mspacman
+
+---- 
+# mspacman.zip
+# MAME ROM Set: mspacman
+
+$ for f in pacman.*; do echo "$f\t $(crc32 $f)"; done 
+pacman.6e        c1e6ab10
+pacman.6f        1a6fb2d4
+pacman.6h        bcdd1beb
+pacman.6j        817d94e3
+
+$ for f in 82s*.*; do echo "$f\t $(crc32 $f)"; done   
+82s123.7f        2fc650bd
+82s126.1m        a9cc86bf
+82s126.3m        77245b66
+82s126.4a        3eb3a8e4
+
+$ for f in 5? u?; do echo "$f\t $(crc32 $f)"; done
+5e       5c281d01
+5f       615af909
+u5       f45fbbcd
+u6       a90e7000
+u7       c82cd714
+
+---- 
