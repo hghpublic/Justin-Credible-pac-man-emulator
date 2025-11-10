@@ -103,7 +103,7 @@ namespace JustinCredible.PacEmu
             // By setting the logical size we ensure that the image will scale to fit the window while
             // still maintaining the original aspect ratio.
             SDL.SDL_RenderSetLogicalSize(_gameRendererSurface, width, height);
-
+#if false
             _targetTicksHz = targetTicskHz;
 
             // Setup our audio format.
@@ -123,7 +123,7 @@ namespace JustinCredible.PacEmu
 
             // Unpause the audio device and so that it will play once samples are queued up.
             SDL.SDL_PauseAudioDevice(_audioDevice, 0);
-
+#endif
             // Attempt to open controllers.
 
             var numJoysticks = SDL.SDL_NumJoysticks();
