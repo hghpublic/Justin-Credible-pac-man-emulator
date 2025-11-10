@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading;
-using Microsoft.Extensions.CommandLineUtils;
+using McMaster.Extensions.CommandLineUtils;
 using Newtonsoft.Json;
 
 namespace JustinCredible.PacEmu.CLI
